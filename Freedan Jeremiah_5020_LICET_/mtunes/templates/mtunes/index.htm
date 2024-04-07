@@ -1,0 +1,140 @@
+{%extends 'mtunes/basic.htm'%}
+{% block title%}MYmusic{% endblock %}
+
+{% block body %}
+  {% load static %}
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'mtunes/headphones-pink-pastel-colors-bright.jpg' %}" class="d-block mx-auto" style="max-width: 500px; height: auto;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{%static 'mtunes/m2.jpg'%}" class="d-block mx-auto" style="max-width: 500px; height: auto;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{%static 'mtunes/m3.jpg'%}" class="d-block mx-auto" style="max-width: 500px; height: auto;" alt="...">
+          </div>
+        </div>
+      </div>
+
+      <!-- #####################################################CARDS############################################################## -->
+      <h2 style = "padding-left: 8%; padding-top: 2%; font-family: 'Verdana';">Trending songs</h2>
+      
+      <div class="row" style="padding-top: 2%; padding-left: 7%;">
+      {%for i in song %}
+      <div style = "padding-left: 2%; padding-bottom: 3%;">
+      <div class="card" style="width: 18rem; ">
+        <img src="/media/{{i.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{i.name}}</h5>
+          <p class="card-text">{{i.tags}}</p>
+          <a href="/mtunes/songs/{{i.song_id}}" class="btn btn-outline-danger">Listen Song</a>
+        </div>
+      </div>
+      </div>
+      
+      {%endfor%}
+      </div>
+      <hr>
+
+
+      <h2 style = "padding-left: 8%; padding-top: 2%; font-family: 'Verdana';">Your playlist</h2>
+      <div class="row" style="padding-top: 2%; padding-left: 7%;">
+
+      <div style = "padding-left: 2%; padding-bottom: 3%;">
+      <div class="card" style="width: 18rem; ">
+        <img src="{%static 'mtunes/m3.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">"Bohemian Rhapsody" by Queen</h5>
+          <p class="card-text">A genre-bending masterpiece, "Bohemian Rhapsody" takes listeners on an operatic journey through its dynamic shifts and emotive storytelling.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      </div>
+      </div>
+
+      <div style = "padding-left: 2%">
+      <div class="card" style="width: 18rem;">
+        <img src="{%static 'mtunes/m3.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">"Smells Like Teen Spirit" by Nirvana</h5>
+          <p class="card-text">An anthem of teenage angst, "Smells Like Teen Spirit" captured the disillusionment of a generation with its raw energy and iconic riff.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      </div>
+      </div>
+
+      <div style = "padding-left: 2%">
+        <div class="card" style="width: 18rem;">
+          <img src="{%static 'mtunes/m3.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">"Hotel California" by Eagles</h5>
+            <p class="card-text">With its haunting lyrics and unforgettable guitar solos, "Hotel California" invites listeners to ponder the mysteries of life and the pursuit of happiness.</p>
+            <a href="#" class="btn btn-primary">Listen</a>
+          </div>
+        </div>
+        </div>
+
+      <div style = "padding-left: 2%">
+      <div class="card" style="width: 18rem; ">
+        <img src="{%static 'mtunes/m3.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">"Imagine" by John Lennon</h5>
+          <p class="card-text">A timeless call for peace and unity, "Imagine" encourages listeners to envision a world free from barriers and divisions with its simple yet powerful lyrics.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      </div>
+      </div>
+      </div>
+      <hr>
+
+      <h2 style = "padding-left: 8%; padding-top: 2%; font-family: 'Verdana';">Your Liked Songs</h2>
+      <div class="row" style="padding-top: 2%; padding-left: 7%;">
+
+      <div style = "padding-left: 2%; padding-bottom: 3%;">
+      <div class="card" style="width: 18rem; ">
+        <img src="{%static 'mtunes/m3.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">"Hey Jude" by The Beatles</h5>
+          <p class="card-text">"Hey Jude" stands as a comforting reassurance in times of trouble, its uplifting melody and sing-along chorus offering solace and encouragement.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      </div>
+      </div>
+
+      <div style = "padding-left: 2%">
+      <div class="card" style="width: 18rem;">
+        <img src="{%static 'mtunes/m3.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">"Stairway to Heaven" by Led Zeppelin</h5>
+          <p class="card-text">SEpic in both length and scope, "Stairway to Heaven" weaves a tale of spiritual seeking and transcendence with its mesmerizing guitar work and poetic lyrics.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      </div>
+      </div>
+
+      <div style = "padding-left: 2%">
+        <div class="card" style="width: 18rem;">
+          <img src="{%static 'mtunes/m3.jpg'%}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">"Like a Rolling Stone" by Bob Dylan</h5>
+            <p class="card-text">A scathing critique of societal norms, "Like a Rolling Stone" challenges listeners to question conformity and embrace their own path with its defiant lyrics.</p>
+            <a href="#" class="btn btn-primary">Listen</a>
+          </div>
+        </div>
+        </div>
+
+      <div style = "padding-left: 2%">
+      <div class="card" style="width: 18rem; ">
+        <img src="{%static 'mtunes/m3.jpg'%}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">"Boogie Wonderland" by Earth, Wind & Fire</h5>
+          <p class="card-text">A disco-infused celebration of joy and liberation, "Boogie Wonderland" invites listeners to lose themselves on the dance floor with its infectious groove.</p>
+          <a href="#" class="btn btn-primary">Listen</a>
+        </div>
+      </div>
+      </div>
+      </div>
+      
+{% endblock %}
+    
+
